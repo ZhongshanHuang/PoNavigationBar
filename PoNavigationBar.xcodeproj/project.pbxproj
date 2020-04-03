@@ -1,0 +1,397 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6C687DEB2435C2A200D59FFC /* PoNavigationBarConfigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C687DEA2435C2A200D59FFC /* PoNavigationBarConfigure.swift */; };
+		6CF20FEB24343C2D00383BBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF20FEA24343C2D00383BBF /* AppDelegate.swift */; };
+		6CF20FEF24343C2D00383BBF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF20FEE24343C2D00383BBF /* ViewController.swift */; };
+		6CF20FF224343C2D00383BBF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CF20FF024343C2D00383BBF /* Main.storyboard */; };
+		6CF20FF424343C3000383BBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CF20FF324343C3000383BBF /* Assets.xcassets */; };
+		6CF20FF724343C3000383BBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CF20FF524343C3000383BBF /* LaunchScreen.storyboard */; };
+		6CF2100224343C8800383BBF /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF20FFF24343C8800383BBF /* UIViewController+Extension.swift */; };
+		6CF2100424343C8800383BBF /* PoNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF2100124343C8800383BBF /* PoNavigationController.swift */; };
+		6CF2100D24343C9100383BBF /* ColorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CF2100624343C9100383BBF /* ColorCell.xib */; };
+		6CF2100E24343C9100383BBF /* SwitchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CF2100724343C9100383BBF /* SwitchCell.xib */; };
+		6CF2100F24343C9100383BBF /* ColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF2100824343C9100383BBF /* ColorCell.swift */; };
+		6CF2101024343C9100383BBF /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF2100924343C9100383BBF /* Header.swift */; };
+		6CF2101124343C9100383BBF /* SwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF2100A24343C9100383BBF /* SwitchCell.swift */; };
+		6CF2101224343C9100383BBF /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CF2100B24343C9100383BBF /* ImageCell.xib */; };
+		6CF2101324343C9100383BBF /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF2100C24343C9100383BBF /* ImageCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6C687DEA2435C2A200D59FFC /* PoNavigationBarConfigure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoNavigationBarConfigure.swift; sourceTree = "<group>"; };
+		6CF20FE724343C2D00383BBF /* PoNavigationBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PoNavigationBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CF20FEA24343C2D00383BBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6CF20FEE24343C2D00383BBF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6CF20FF124343C2D00383BBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6CF20FF324343C3000383BBF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6CF20FF624343C3000383BBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6CF20FF824343C3000383BBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6CF20FFF24343C8800383BBF /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		6CF2100124343C8800383BBF /* PoNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoNavigationController.swift; sourceTree = "<group>"; };
+		6CF2100624343C9100383BBF /* ColorCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorCell.xib; sourceTree = "<group>"; };
+		6CF2100724343C9100383BBF /* SwitchCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SwitchCell.xib; sourceTree = "<group>"; };
+		6CF2100824343C9100383BBF /* ColorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorCell.swift; sourceTree = "<group>"; };
+		6CF2100924343C9100383BBF /* Header.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		6CF2100A24343C9100383BBF /* SwitchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchCell.swift; sourceTree = "<group>"; };
+		6CF2100B24343C9100383BBF /* ImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
+		6CF2100C24343C9100383BBF /* ImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6CF20FE424343C2D00383BBF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6CF20FDE24343C2D00383BBF = {
+			isa = PBXGroup;
+			children = (
+				6CF20FE924343C2D00383BBF /* PoNavigationBar */,
+				6CF20FE824343C2D00383BBF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6CF20FE824343C2D00383BBF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6CF20FE724343C2D00383BBF /* PoNavigationBar.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6CF20FE924343C2D00383BBF /* PoNavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				6CF20FEA24343C2D00383BBF /* AppDelegate.swift */,
+				6CF20FEE24343C2D00383BBF /* ViewController.swift */,
+				6CF2100524343C9100383BBF /* View */,
+				6CF20FFE24343C8800383BBF /* Source */,
+				6CF20FF024343C2D00383BBF /* Main.storyboard */,
+				6CF20FF324343C3000383BBF /* Assets.xcassets */,
+				6CF20FF524343C3000383BBF /* LaunchScreen.storyboard */,
+				6CF20FF824343C3000383BBF /* Info.plist */,
+			);
+			path = PoNavigationBar;
+			sourceTree = "<group>";
+		};
+		6CF20FFE24343C8800383BBF /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				6CF20FFF24343C8800383BBF /* UIViewController+Extension.swift */,
+				6CF2100124343C8800383BBF /* PoNavigationController.swift */,
+				6C687DEA2435C2A200D59FFC /* PoNavigationBarConfigure.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		6CF2100524343C9100383BBF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6CF2100624343C9100383BBF /* ColorCell.xib */,
+				6CF2100724343C9100383BBF /* SwitchCell.xib */,
+				6CF2100824343C9100383BBF /* ColorCell.swift */,
+				6CF2100924343C9100383BBF /* Header.swift */,
+				6CF2100A24343C9100383BBF /* SwitchCell.swift */,
+				6CF2100B24343C9100383BBF /* ImageCell.xib */,
+				6CF2100C24343C9100383BBF /* ImageCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6CF20FE624343C2D00383BBF /* PoNavigationBar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6CF20FFB24343C3000383BBF /* Build configuration list for PBXNativeTarget "PoNavigationBar" */;
+			buildPhases = (
+				6CF20FE324343C2D00383BBF /* Sources */,
+				6CF20FE424343C2D00383BBF /* Frameworks */,
+				6CF20FE524343C2D00383BBF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PoNavigationBar;
+			productName = PoNavigationBar;
+			productReference = 6CF20FE724343C2D00383BBF /* PoNavigationBar.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6CF20FDF24343C2D00383BBF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = potato;
+				TargetAttributes = {
+					6CF20FE624343C2D00383BBF = {
+						CreatedOnToolsVersion = 11.4;
+					};
+				};
+			};
+			buildConfigurationList = 6CF20FE224343C2D00383BBF /* Build configuration list for PBXProject "PoNavigationBar" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6CF20FDE24343C2D00383BBF;
+			productRefGroup = 6CF20FE824343C2D00383BBF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6CF20FE624343C2D00383BBF /* PoNavigationBar */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6CF20FE524343C2D00383BBF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CF20FF724343C3000383BBF /* LaunchScreen.storyboard in Resources */,
+				6CF2100D24343C9100383BBF /* ColorCell.xib in Resources */,
+				6CF20FF424343C3000383BBF /* Assets.xcassets in Resources */,
+				6CF2101224343C9100383BBF /* ImageCell.xib in Resources */,
+				6CF20FF224343C2D00383BBF /* Main.storyboard in Resources */,
+				6CF2100E24343C9100383BBF /* SwitchCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6CF20FE324343C2D00383BBF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CF2100224343C8800383BBF /* UIViewController+Extension.swift in Sources */,
+				6CF2101324343C9100383BBF /* ImageCell.swift in Sources */,
+				6CF2100424343C8800383BBF /* PoNavigationController.swift in Sources */,
+				6CF2101024343C9100383BBF /* Header.swift in Sources */,
+				6C687DEB2435C2A200D59FFC /* PoNavigationBarConfigure.swift in Sources */,
+				6CF20FEF24343C2D00383BBF /* ViewController.swift in Sources */,
+				6CF2101124343C9100383BBF /* SwitchCell.swift in Sources */,
+				6CF20FEB24343C2D00383BBF /* AppDelegate.swift in Sources */,
+				6CF2100F24343C9100383BBF /* ColorCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6CF20FF024343C2D00383BBF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6CF20FF124343C2D00383BBF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6CF20FF524343C3000383BBF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6CF20FF624343C3000383BBF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6CF20FF924343C3000383BBF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6CF20FFA24343C3000383BBF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6CF20FFC24343C3000383BBF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HTCFQ79HMN;
+				INFOPLIST_FILE = PoNavigationBar/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.potato.www.PoNavigationBar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		6CF20FFD24343C3000383BBF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HTCFQ79HMN;
+				INFOPLIST_FILE = PoNavigationBar/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.potato.www.PoNavigationBar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6CF20FE224343C2D00383BBF /* Build configuration list for PBXProject "PoNavigationBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6CF20FF924343C3000383BBF /* Debug */,
+				6CF20FFA24343C3000383BBF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6CF20FFB24343C3000383BBF /* Build configuration list for PBXNativeTarget "PoNavigationBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6CF20FFC24343C3000383BBF /* Debug */,
+				6CF20FFD24343C3000383BBF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6CF20FDF24343C2D00383BBF /* Project object */;
+}
