@@ -76,12 +76,16 @@ extension PoNavigationController: UINavigationControllerDelegate {
                 }
             }
             
+            toVC.navigationBarConfigure.fillSelfEmptyValue(with: self.defaultNavigationBarConfigure)
             if (toVC.navigationBarConfigure.isHidden ?? false) == false {
                 if let fakeBarFrame = toVC.originNavigationBarFrame {
                     self.toFakeBar.frame = fakeBarFrame
                     toVC.navigationBarConfigure.apply(to: self.toFakeBar)
                     toVC.view.addSubview(self.toFakeBar)
                 }
+                navigationController.navigationBar.barTintColor = toVC.navigationBarConfigure.barTintColor
+                navigationController.navigationBar.titleTextAttributes = toVC.navigationBarConfigure.titleTextAttributes
+                navigationController.navigationBar.barStyle = toVC.navigationBarConfigure.barStyle ?? .default
             }
             
         }, completion: { (ctx) in
