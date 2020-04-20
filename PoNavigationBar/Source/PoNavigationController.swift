@@ -24,7 +24,7 @@ open class PoNavigationController: UINavigationController {
     }()
     
     /// 全屏返回
-    open lazy var fullScreenPanPopGestureRecognizer: UIPanGestureRecognizer = {
+    open lazy var fullScreenPopGestureRecognizer: UIPanGestureRecognizer = {
         let target = interactivePopGestureRecognizer?.delegate
         let pan = UIPanGestureRecognizer(target: target, action: Selector(("handleNavigationTransition:")))
         pan.delegate = self
@@ -35,7 +35,7 @@ open class PoNavigationController: UINavigationController {
         super.viewDidLoad()
         
         // 全屏侧滑返回
-        view.addGestureRecognizer(fullScreenPanPopGestureRecognizer)
+        view.addGestureRecognizer(fullScreenPopGestureRecognizer)
         interactivePopGestureRecognizer?.isEnabled = false
         
         // 代理
@@ -114,7 +114,7 @@ extension PoNavigationController: UINavigationControllerDelegate {
 extension PoNavigationController: UIGestureRecognizerDelegate {
     
     public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
-        if gestureRecognizer === self.fullScreenPanPopGestureRecognizer {
+        if gestureRecognizer === self.fullScreenPopGestureRecognizer {
             return viewControllers.count > 1
         }
         return false
