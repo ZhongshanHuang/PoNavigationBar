@@ -21,7 +21,7 @@ open class PoNavigationBarConfigure {
     var titleTextAttributes: [NSAttributedString.Key: Any]?
     
     func apply(to navigationBar: UINavigationBar) {
-        navigationBar.isHidden = isHidden ?? false
+//        navigationBar.isHidden = isHidden ?? false
         navigationBar.barStyle = barStyle ?? .default
         navigationBar.tintColor = tintColor
         navigationBar.isTranslucent = isTranslucent ?? true

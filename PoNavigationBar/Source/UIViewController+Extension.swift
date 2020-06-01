@@ -40,9 +40,10 @@ extension UIViewController {
     
     /// 将navigationBarConfigure设置到navigationBar
     /// 除非在viewWillAppear之后设置了navigationBarConfigure，否则不需要手动调用
-    open func flushBarConfigure() {
+    open func flushBarConfigure(_ animated: Bool = false) {
         guard let navigationBar = navigationController?.navigationBar else { return }
         navigationBarConfigure.apply(to: navigationBar)
+        navigationController?.setNavigationBarHidden(navigationBarConfigure.isHidden ?? false, animated: animated)
     }
     
     internal var originNavigationBarFrame: CGRect? {
