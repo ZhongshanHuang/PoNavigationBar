@@ -2,11 +2,12 @@
 //  ViewController.swift
 //  PoNavigationBar
 //
-//  Created by 黄中山 on 2020/4/1.
-//  Copyright © 2020 potato. All rights reserved.
+//  Created by 154427919@qq.com on 03/01/2021.
+//  Copyright (c) 2021 154427919@qq.com. All rights reserved.
 //
 
 import UIKit
+import PoNavigationBar
 
 class ViewController: UIViewController {
 
@@ -160,6 +161,4 @@ extension ViewController: UITableViewDelegate {
         navigationController?.pushViewController(vc, animated: true)
     }
 }
-
-
 

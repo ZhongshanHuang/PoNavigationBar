@@ -1,0 +1,6 @@
+framework module PoNavigationBar {
+  umbrella header "PoNavigationBar-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,16 @@
+PODS:
+  - PoNavigationBar (0.1.0)
+
+DEPENDENCIES:
+  - PoNavigationBar (from `../`)
+
+EXTERNAL SOURCES:
+  PoNavigationBar:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  PoNavigationBar: cd450da733f431c4904ad6c62c843a63abe65407
+
+PODFILE CHECKSUM: f37e7a8be97617faca90c11fa80acb376dd80b6b
+
+COCOAPODS: 1.10.1

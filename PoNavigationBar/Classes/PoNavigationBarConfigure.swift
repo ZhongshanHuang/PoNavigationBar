@@ -10,18 +10,18 @@ import UIKit
 
 open class PoNavigationBarConfigure {
     
-    var isHidden: Bool?
-    var barStyle: UIBarStyle?
-    var isTranslucent: Bool?
-    var tintColor: UIColor?
-    var barTintColor: UIColor?
-    var backgroundColor: UIColor?
-    var backgroundImage: UIImage?
-    var shadowImage: UIImage?
-    var titleTextAttributes: [NSAttributedString.Key: Any]?
+    open var isHidden: Bool?
+    open var barStyle: UIBarStyle?
+    open var isTranslucent: Bool?
+    open var tintColor: UIColor?
+    open var barTintColor: UIColor?
+    open var backgroundColor: UIColor?
+    open var backgroundImage: UIImage?
+    open var shadowImage: UIImage?
+    open var titleTextAttributes: [NSAttributedString.Key: Any]?
     
-    func apply(to navigationBar: UINavigationBar) {
-//        navigationBar.isHidden = isHidden ?? false
+    open func apply(to navigationBar: UINavigationBar) {
+//        navigationBar.isHidden = isHidden ?? false // 在别处设置的此属性
         navigationBar.barStyle = barStyle ?? .default
         navigationBar.tintColor = tintColor
         navigationBar.isTranslucent = isTranslucent ?? true
@@ -32,7 +32,7 @@ open class PoNavigationBarConfigure {
         navigationBar.titleTextAttributes = titleTextAttributes
     }
     
-    func apply(to toolBar: UIToolbar) {
+    open func apply(to toolBar: UIToolbar) {
         toolBar.isHidden = isHidden ?? false
         toolBar.barStyle = barStyle ?? .default
         toolBar.isTranslucent = isTranslucent ?? true
@@ -44,7 +44,7 @@ open class PoNavigationBarConfigure {
     
     /// 如果自身的属性是nil， 就用另外的配置对应属性来填充（主要是用来区分是否对应的UIViewController特别设置的，
     /// 不是的话就用defaultNavigationBarConfigure）
-    func fillSelfEmptyValue(with anotherConfigure: PoNavigationBarConfigure) {
+    open func fillSelfEmptyValue(with anotherConfigure: PoNavigationBarConfigure) {
         if isHidden == nil {
             isHidden = anotherConfigure.isHidden
         }

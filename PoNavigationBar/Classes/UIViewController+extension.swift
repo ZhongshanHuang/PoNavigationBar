@@ -46,7 +46,7 @@ extension UIViewController {
         navigationController?.setNavigationBarHidden(navigationBarConfigure.isHidden ?? false, animated: animated)
     }
     
-    internal var originNavigationBarFrame: CGRect? {
+    var originNavigationBarFrame: CGRect? {
         guard let bar = navigationController?.navigationBar else { return nil }
         guard let background = bar.value(forKey: "_backgroundView") as? UIView else { return nil }
         var frame = background.frame
