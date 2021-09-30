@@ -38,6 +38,15 @@ extension UIViewController {
         }
     }
     
+    /// copy default standard appearance
+    @available(iOS 13.0, *)
+    open var copyNavigationBarStandardAppearance: UINavigationBarAppearance? {
+        if let appearance = (navigationController as? PoNavigationController)?.defaultNavigationBarConfigure.standardAppearance {
+            return UINavigationBarAppearance(barAppearance: appearance)
+        }
+        return nil
+    }
+    
     /// 将navigationBarConfigure设置到navigationBar
     /// 除非在viewWillAppear之后设置了navigationBarConfigure，否则不需要手动调用
     open func flushBarConfigure(_ animated: Bool = false) {
@@ -46,7 +55,7 @@ extension UIViewController {
         navigationController?.setNavigationBarHidden(navigationBarConfigure.isHidden ?? false, animated: animated)
     }
     
-    var originNavigationBarFrame: CGRect? {
+    internal var originNavigationBarFrame: CGRect? {
         guard let bar = navigationController?.navigationBar else { return nil }
         guard let background = bar.value(forKey: "_backgroundView") as? UIView else { return nil }
         var frame = background.frame

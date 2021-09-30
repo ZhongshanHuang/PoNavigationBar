@@ -28,6 +28,9 @@ class ViewController: UIViewController {
     private func setupUI() {
         title = "PoNavigationBar"
         
+        if #available(iOS 15.0, *) {
+            tableView.sectionHeaderTopPadding = 0
+        }
         tableView.dataSource = self
         tableView.delegate = self
         tableView.estimatedRowHeight = 0
@@ -138,6 +141,14 @@ extension ViewController: UITableViewDelegate {
             vc.navigationBarConfigure.isTranslucent = true
             vc.navigationBarConfigure.backgroundImage = UIImage()
             vc.navigationBarConfigure.shadowImage = UIImage()
+            if #available(iOS 13.0, *) {
+                let appearance = copyNavigationBarStandardAppearance
+                appearance?.configureWithTransparentBackground()
+                
+                vc.navigationBarConfigure.standardAppearance = appearance
+                vc.navigationBarConfigure.scrollEdgeAppearance = appearance
+            }
+            
             navigationController?.pushViewController(vc, animated: true)
             return
         }
@@ -157,6 +168,26 @@ extension ViewController: UITableViewDelegate {
             vc.navigationBarConfigure.backgroundImage = model.1
         default:
             fatalError("Not Implement")
+        }
+        if #available(iOS 13.0, *) {
+            let appearance = copyNavigationBarStandardAppearance
+            if transluent {
+                appearance?.configureWithDefaultBackground()
+                appearance?.backgroundEffect = UIBlurEffect(style: .light)
+                appearance?.backgroundColor = vc.navigationBarConfigure.barTintColor?.withAlphaComponent(0.3)
+            } else {
+                appearance?.configureWithOpaqueBackground()
+                appearance?.backgroundColor = vc.navigationBarConfigure.barTintColor
+            }
+            appearance?.backgroundImage = vc.navigationBarConfigure.backgroundImage
+            
+            if vc.navigationBarConfigure.shadowImage != nil {
+                appearance?.shadowImage = vc.navigationBarConfigure.shadowImage
+                appearance?.shadowColor = UIColor.clear
+            }
+            
+            vc.navigationBarConfigure.standardAppearance = appearance
+            vc.navigationBarConfigure.scrollEdgeAppearance = appearance
         }
         navigationController?.pushViewController(vc, animated: true)
     }

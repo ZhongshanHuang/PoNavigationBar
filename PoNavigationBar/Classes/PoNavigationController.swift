@@ -20,6 +20,11 @@ open class PoNavigationController: UINavigationController {
         config.barStyle = .default
         config.isTranslucent = true
         config.isHidden = false
+        if #available(iOS 13.0, *) {
+            let appearance = UINavigationBarAppearance()
+            config.standardAppearance = appearance
+            config.scrollEdgeAppearance = appearance
+        }
         return config
     }()
     
@@ -61,6 +66,13 @@ extension PoNavigationController: UINavigationControllerDelegate {
         navigationController.navigationBar.isTranslucent = true
         navigationController.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController.navigationBar.shadowImage = UIImage()
+        if #available(iOS 13.0, *) {
+            let appearance = UINavigationBarAppearance()
+            appearance.configureWithTransparentBackground()
+            navigationController.navigationBar.standardAppearance = appearance
+            navigationController.navigationBar.scrollEdgeAppearance = appearance
+        }
+        
         (navigationController.navigationBar.value(forKey: "_backgroundView") as? UIView)?.isHidden = true
         
         navigationController.transitionCoordinator?.animate(alongsideTransition: { (ctx) in
@@ -85,9 +97,17 @@ extension PoNavigationController: UINavigationControllerDelegate {
                 }
                 navigationController.navigationBar.barTintColor = toVC.navigationBarConfigure.barTintColor
                 navigationController.navigationBar.titleTextAttributes = toVC.navigationBarConfigure.titleTextAttributes
+                navigationController.navigationBar.setBackgroundImage(toVC.navigationBarConfigure.backgroundImage, for: .default)
                 navigationController.navigationBar.barStyle = toVC.navigationBarConfigure.barStyle ?? .default
+                if #available(iOS 13.0, *) {
+                    var appearance = toVC.navigationBarConfigure.standardAppearance
+                    if appearance == nil {
+                        appearance = self.defaultNavigationBarConfigure.standardAppearance ?? UINavigationBarAppearance()
+                    }
+                    navigationController.navigationBar.standardAppearance = appearance!
+                    navigationController.navigationBar.scrollEdgeAppearance = appearance
+                }
             }
-            
         }, completion: { (ctx) in
             if ctx.isCancelled { // 失败后恢复原状
                 self.fromFakeBar.removeFromSuperview()
@@ -101,7 +121,7 @@ extension PoNavigationController: UINavigationControllerDelegate {
         })
     }
     
-    // 如果push或者pop成功就掉用，失败是不会掉用这儿的，比上面的completion先掉用
+    // 如果push或者pop成功就调用，失败是不会调用这儿的，比上面的completion先掉用
     public func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
         self.fromFakeBar.removeFromSuperview()
         self.toFakeBar.removeFromSuperview()

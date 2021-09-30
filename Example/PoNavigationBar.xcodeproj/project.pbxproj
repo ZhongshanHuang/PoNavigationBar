@@ -157,13 +157,13 @@
 		6CEE601425ECE340007AB39A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				6CEE601525ECE340007AB39A /* ColorCell.xib */,
-				6CEE601625ECE340007AB39A /* SwitchCell.xib */,
 				6CEE601725ECE340007AB39A /* ColorCell.swift */,
+				6CEE601525ECE340007AB39A /* ColorCell.xib */,
 				6CEE601825ECE340007AB39A /* Header.swift */,
-				6CEE601925ECE340007AB39A /* SwitchCell.swift */,
-				6CEE601A25ECE340007AB39A /* ImageCell.xib */,
 				6CEE601B25ECE340007AB39A /* ImageCell.swift */,
+				6CEE601A25ECE340007AB39A /* ImageCell.xib */,
+				6CEE601925ECE340007AB39A /* SwitchCell.swift */,
+				6CEE601625ECE340007AB39A /* SwitchCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -241,10 +241,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = HTCFQ79HMN;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = HTCFQ79HMN;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -524,6 +526,7 @@
 			baseConfigurationReference = E60415E9E4B5282AFE37DE46 /* Pods-PoNavigationBar_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = HTCFQ79HMN;
 				INFOPLIST_FILE = PoNavigationBar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -539,6 +542,7 @@
 			baseConfigurationReference = 1B48F5A0D2CA901D057B1259 /* Pods-PoNavigationBar_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = HTCFQ79HMN;
 				INFOPLIST_FILE = PoNavigationBar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -553,6 +557,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DFA931B29E584A79D6F879AD /* Pods-PoNavigationBar_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = HTCFQ79HMN;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -575,6 +580,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 160C829BBDE201F6F5B4B80E /* Pods-PoNavigationBar_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = HTCFQ79HMN;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
