@@ -112,6 +112,7 @@ extension PoNavigationController: UINavigationControllerDelegate {
             if ctx.isCancelled { // 失败后恢复原状
                 self.fromFakeBar.removeFromSuperview()
                 self.toFakeBar.removeFromSuperview()
+                (navigationController.navigationBar.value(forKey: "_backgroundView") as? UIView)?.isHidden = false
                 guard let fromVC = ctx.viewController(forKey: .from) else { fatalError("nil") }
                 fromVC.navigationBarConfigure.apply(to: self.navigationBar)
                 if fromVC.navigationBarConfigure.isHidden != self.navigationBar.isHidden {
