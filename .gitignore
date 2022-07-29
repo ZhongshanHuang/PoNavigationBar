@@ -88,3 +88,6 @@ fastlane/test_output
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
+Example/Pods/Pods.xcodeproj/project.xcworkspace/contents.xcworkspacedata
+Example/Pods/Pods.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
+Example/PoNavigationBar.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
