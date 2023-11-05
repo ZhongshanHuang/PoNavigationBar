@@ -9,12 +9,10 @@
 import UIKit
 import PoNavigationBar
 
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -24,7 +22,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let root = PoNavigationController(rootViewController: ViewController())
         root.defaultNavigationBarConfigure.titleTextAttributes = [.font: UIFont.systemFont(ofSize: 17),
                                                                   .foregroundColor: UIColor.red]
+        
         window?.rootViewController = root
+//        window?.rootViewController = UINavigationController(rootViewController: FirstViewController())
         window?.makeKeyAndVisible()
         return true
     }

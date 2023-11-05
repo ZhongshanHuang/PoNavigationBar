@@ -8,6 +8,7 @@
 
 import UIKit
 import PoNavigationBar
+import PotatoKit
 
 class ViewController: UIViewController {
 
@@ -23,6 +24,14 @@ class ViewController: UIViewController {
         setupUI()
         mockDataList()
         tableView.reloadData()
+        print(#function)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        Loading.showLoading()
+        
+        Toast.show("111111111")
     }
 
     private func setupUI() {
