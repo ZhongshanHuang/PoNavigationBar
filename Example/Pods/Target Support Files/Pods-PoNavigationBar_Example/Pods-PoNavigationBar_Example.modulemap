@@ -1,6 +1,0 @@
-framework module Pods_PoNavigationBar_Example {
-  umbrella header "Pods-PoNavigationBar_Example-umbrella.h"
-
-  export *
-  module * { export * }
-}
