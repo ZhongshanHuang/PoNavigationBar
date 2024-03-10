@@ -1,5 +1,5 @@
 //
-//  PoNavigationBarConfigure.swift
+//  PoNavigationBarConfiguration.swift
 //  PoNavigationBar
 //
 //  Created by 黄中山 on 2020/4/2.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class PoNavigationBarConfigure {
+public class PoNavigationBarConfiguration {
     
     public var isHidden: Bool?
     public var barStyle: UIBarStyle?
@@ -84,48 +84,48 @@ public class PoNavigationBarConfigure {
     
     /// 如果自身的属性是nil， 就用另外的配置对应属性来填充（主要是用来区分是否对应的UIViewController特别设置的，
     /// 不是的话就用defaultNavigationBarConfigure）
-    internal func fillSelfEmptyValue(with anotherConfigure: PoNavigationBarConfigure) {
+    internal func fillSelfEmptyValue(with anotherConfiguration: PoNavigationBarConfiguration) {
         if isHidden == nil {
-            isHidden = anotherConfigure.isHidden
+            isHidden = anotherConfiguration.isHidden
         }
         if barStyle == nil {
-            barStyle = anotherConfigure.barStyle
+            barStyle = anotherConfiguration.barStyle
         }
         if isTranslucent == nil {
-            isTranslucent = anotherConfigure.isTranslucent
+            isTranslucent = anotherConfiguration.isTranslucent
         }
         if tintColor == nil {
-            tintColor = anotherConfigure.tintColor
+            tintColor = anotherConfiguration.tintColor
         }
         if barTintColor == nil {
-            barTintColor = anotherConfigure.barTintColor
+            barTintColor = anotherConfiguration.barTintColor
         }
         if backgroundColor == nil {
-            backgroundColor = anotherConfigure.backgroundColor
+            backgroundColor = anotherConfiguration.backgroundColor
         }
         if backgroundImage == nil {
-            backgroundImage = anotherConfigure.backgroundImage
+            backgroundImage = anotherConfiguration.backgroundImage
         }
         if shadowImage == nil {
-            shadowImage = anotherConfigure.shadowImage
+            shadowImage = anotherConfiguration.shadowImage
         }
         if titleTextAttributes == nil {
-            titleTextAttributes = anotherConfigure.titleTextAttributes
+            titleTextAttributes = anotherConfiguration.titleTextAttributes
         }
         if #available(iOS 13.0, *) {
             if standardAppearance == nil {
-                standardAppearance = anotherConfigure.standardAppearance
+                standardAppearance = anotherConfiguration.standardAppearance
             }
             if compactAppearance == nil {
-                compactAppearance = anotherConfigure.compactAppearance
+                compactAppearance = anotherConfiguration.compactAppearance
             }
             if scrollEdgeAppearance == nil {
-                scrollEdgeAppearance = anotherConfigure.scrollEdgeAppearance
+                scrollEdgeAppearance = anotherConfiguration.scrollEdgeAppearance
             }
         }
         if #available(iOS 15.0, *) {
             if compactScrollEdgeAppearance == nil {
-                compactScrollEdgeAppearance = anotherConfigure.compactScrollEdgeAppearance
+                compactScrollEdgeAppearance = anotherConfiguration.compactScrollEdgeAppearance
             }
         }
     }
