@@ -103,8 +103,8 @@ public class PoNavigationBarConfiguration {
         if isBottomLineHidden == nil {
             isBottomLineHidden = anotherConfiguration.isBottomLineHidden
         }
-        if isTranslucent == nil {
-            isTranslucent = anotherConfiguration.isTranslucent
+        if isTransparent == nil {
+            isTransparent = anotherConfiguration.isTransparent
         }
         if isHidden == nil {
             isHidden = anotherConfiguration.isHidden
