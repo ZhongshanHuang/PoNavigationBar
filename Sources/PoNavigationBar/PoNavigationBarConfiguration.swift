@@ -10,6 +10,13 @@ import UIKit
 
 public class PoNavigationBarConfiguration {
     
+    /* 自定义便利属性 */
+    /// 是否隐藏navigationBar下面的线条
+    public var isBottomLineHidden: Bool?
+    /// 是否将navigationBar设置为透明
+    public var isTransparent: Bool?
+    
+    /* 对应原生属性 */
     public var isHidden: Bool?
     public var barStyle: UIBarStyle?
     public var isTranslucent: Bool?
@@ -66,25 +73,39 @@ public class PoNavigationBarConfiguration {
         if #available(iOS 15.0, *) {
             navigationBar.compactScrollEdgeAppearance = compactScrollEdgeAppearance
         }
-    }
-    
-    internal func apply(to toolBar: UIToolbar) {
-        toolBar.isHidden = isHidden ?? false
-        toolBar.barStyle = barStyle ?? .default
-        toolBar.isTranslucent = isTranslucent ?? true
-        toolBar.barTintColor = barTintColor
-        toolBar.backgroundColor = backgroundColor
-        toolBar.setBackgroundImage(backgroundImage, forToolbarPosition: .bottom, barMetrics: .default)
-        toolBar.setShadowImage(shadowImage, forToolbarPosition: .bottom)
-        if #available(iOS 13.0, *) {
-            toolBar.standardAppearance = standardAppearance?.toToolbarAppearance ?? UIToolbarAppearance()
-            toolBar.compactAppearance = compactAppearance?.toToolbarAppearance
+        
+        if isBottomLineHidden == true {
+            if #available(iOS 13, *) {
+                navigationBar.standardAppearance.shadowColor = .clear
+                navigationBar.scrollEdgeAppearance?.shadowColor = .clear
+            } else {
+                navigationBar.shadowImage = UIImage()
+            }
+        }
+        
+        if isTransparent == true {
+            navigationBar.isTranslucent = true
+            navigationBar.setBackgroundImage(UIImage(), for: .default)
+            navigationBar.shadowImage = UIImage()
+            
+            if #available(iOS 13.0, *) {
+                let appearance = navigationBar.standardAppearance.copy()
+                appearance.configureWithTransparentBackground()
+                navigationBar.standardAppearance = appearance
+                navigationBar.scrollEdgeAppearance = appearance
+            }
         }
     }
     
     /// 如果自身的属性是nil， 就用另外的配置对应属性来填充（主要是用来区分是否对应的UIViewController特别设置的，
     /// 不是的话就用defaultNavigationBarConfigure）
     internal func fillSelfEmptyValue(with anotherConfiguration: PoNavigationBarConfiguration) {
+        if isBottomLineHidden == nil {
+            isBottomLineHidden = anotherConfiguration.isBottomLineHidden
+        }
+        if isTranslucent == nil {
+            isTranslucent = anotherConfiguration.isTranslucent
+        }
         if isHidden == nil {
             isHidden = anotherConfiguration.isHidden
         }
@@ -128,14 +149,6 @@ public class PoNavigationBarConfiguration {
                 compactScrollEdgeAppearance = anotherConfiguration.compactScrollEdgeAppearance
             }
         }
-    }
-}
-
-@available(iOS 13.0, *)
-private extension UINavigationBarAppearance {
-    
-    var toToolbarAppearance: UIToolbarAppearance {
-        return UIToolbarAppearance(barAppearance: self)
     }
 }
 
