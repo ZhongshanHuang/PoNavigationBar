@@ -63,8 +63,11 @@ extension UINavigationController {
             guard let self else { return }
             
             viewController.poNavigationBarConfig.fillSelfEmptyValue(with: navigationBarConfigrable.defaultNavigationBarConfig)
-            setNavigationBarHidden(viewController.poNavigationBarConfig.isHidden ?? false, animated: animated)
-            viewController.poNavigationBarConfig.apply(to: self.navigationBar)
+            let isHidden = viewController.poNavigationBarConfig.isHidden ?? false
+            setNavigationBarHidden(isHidden, animated: animated)
+            if !isHidden {
+                viewController.poNavigationBarConfig.apply(to: self.navigationBar)
+            }
         }
         
         viewController.willAppearInjectClosure = closure
