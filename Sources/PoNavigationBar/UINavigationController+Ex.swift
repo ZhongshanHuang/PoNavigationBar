@@ -46,7 +46,7 @@ extension UINavigationController {
     @objc
     private func navigationBar_pushViewController(_ viewController: UIViewController, animated: Bool) {
         defer { navigationBar_pushViewController(viewController, animated: animated) }
-        guard let navigationBarConfigrable = self as? PoNavigationBarConfigurable else { return }
+        guard self is PoNavigationBarConfigurable else { return }
         
         let contain =  interactivePopGestureRecognizer?.view?.gestureRecognizers?.contains(where: { $0 == fullScreenPopGestureRecognizer }) == true
         if !contain {
@@ -62,11 +62,11 @@ extension UINavigationController {
         let closure: WillAppearInjectClosure = { [weak self] viewController, animated in
             guard let self else { return }
             
-            viewController.poNavigationBarConfig.fillSelfEmptyValue(with: navigationBarConfigrable.defaultNavigationBarConfig)
+            viewController.poNavigationBarConfig.fillSelfEmptyValue(with: (self as! PoNavigationBarConfigurable).defaultNavigationBarConfig)
             let isHidden = viewController.poNavigationBarConfig.isHidden ?? false
             setNavigationBarHidden(isHidden, animated: animated)
             if !isHidden {
-                viewController.poNavigationBarConfig.apply(to: self.navigationBar)
+                viewController.poNavigationBarConfig.apply(to: navigationBar)
             }
         }
         
