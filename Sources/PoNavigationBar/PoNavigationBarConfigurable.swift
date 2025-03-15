@@ -32,6 +32,7 @@ public extension PoNavigationBarConfigurable {
             config.standardAppearance = appearance
             config.scrollEdgeAppearance = appearance
         }
+        objc_setAssociatedObject(self, &kDefaultNavigationBarConfigKey, config, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         return config
     }
 }
