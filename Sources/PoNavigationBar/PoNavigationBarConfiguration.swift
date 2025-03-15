@@ -55,6 +55,8 @@ public class PoNavigationBarConfiguration {
         set { _compactScrollEdgeAppearance = newValue }
     }
     
+    public init() {}
+    
     internal func apply(to navigationBar: UINavigationBar) {
 //        navigationBar.isHidden = isHidden ?? false // 在别处设置的此属性
         navigationBar.barStyle = barStyle ?? .default
