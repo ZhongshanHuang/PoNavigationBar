@@ -127,6 +127,12 @@ public class PoNavigationBarConfiguration {
         if titleTextAttributes == nil {
             titleTextAttributes = anotherConfiguration.titleTextAttributes
         }
+        if largeTitleTextAttributes == nil {
+            largeTitleTextAttributes = anotherConfiguration.largeTitleTextAttributes
+        }
+        if prefersLargeTitles == nil {
+            prefersLargeTitles = anotherConfiguration.prefersLargeTitles
+        }
         if standardAppearance == nil {
             standardAppearance = anotherConfiguration.standardAppearance
         }
@@ -139,6 +145,11 @@ public class PoNavigationBarConfiguration {
         if #available(iOS 15.0, *) {
             if compactScrollEdgeAppearance == nil {
                 compactScrollEdgeAppearance = anotherConfiguration.compactScrollEdgeAppearance
+            }
+        }
+        if #available(iOS 16.0, *) {
+            if preferredBehavioralStyle == nil {
+                preferredBehavioralStyle = anotherConfiguration.preferredBehavioralStyle
             }
         }
     }
