@@ -48,7 +48,7 @@ extension UINavigationController {
         defer { navigationBar_pushViewController(viewController, animated: animated) }
         guard self is PoNavigationBarConfigurable else { return }
         
-        let contain =  interactivePopGestureRecognizer?.view?.gestureRecognizers?.contains(where: { $0 == fullScreenPopGestureRecognizer }) == true
+        let contain = interactivePopGestureRecognizer?.view?.gestureRecognizers?.contains(where: { $0 == fullScreenPopGestureRecognizer }) == true
         if !contain {
             interactivePopGestureRecognizer?.view?.addGestureRecognizer(fullScreenPopGestureRecognizer)
             fullScreenPopGestureRecognizer.delegate = fullScreenPopGestureRecognizerDelegate
