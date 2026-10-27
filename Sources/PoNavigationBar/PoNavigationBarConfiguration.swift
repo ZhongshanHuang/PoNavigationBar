@@ -1,13 +1,6 @@
-//
-//  PoNavigationBarConfiguration.swift
-//  PoNavigationBar
-//
-//  Created by 黄中山 on 2020/4/2.
-//  Copyright © 2020 potato. All rights reserved.
-//
-
 import UIKit
 
+@MainActor
 public class PoNavigationBarConfiguration {
     
     /* 自定义便利属性 */

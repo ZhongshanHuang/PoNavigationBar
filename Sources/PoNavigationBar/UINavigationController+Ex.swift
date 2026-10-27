@@ -1,14 +1,8 @@
-//
-//  File.swift
-//  
-//
-//  Created by HzS on 2024/3/8.
-//
-
 import UIKit
 
 extension UINavigationController {
     
+    @MainActor
     private struct AssociatedObjectKeys {
         static var fullScreenPopGestureRecognizer: UInt8 = 0
         static var fullScreenPopGestureRecognizerDelegate: UInt8 = 0
